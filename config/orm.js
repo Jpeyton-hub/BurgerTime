@@ -1,5 +1,5 @@
 const db = require('./connection');
-const mysql = require
+const mysql = require('mysql');
 
 const ORM = {
     selectAll(){
@@ -18,8 +18,12 @@ const ORM = {
       });
     },
 
-    updateOne(){
-
+    updateOne(burgerId){
+        let sql = "UPDATE burgers SET devoured = 1 WHERE id = ?";
+        db.query(sql, [burgerId], (err, result) => {
+            if (err) throw err;
+            console.log("burger devoured");
+        });
     }
 };
 
