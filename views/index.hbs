@@ -1,7 +1,10 @@
-<div class="formtainer container">
+<div class="container">
+    <h1 class="title">Burger Time!</h1>
+    <img id="burgerpic" src="/assets/img/transparentburger.png" alt="tasty burger">
     <form action="/addburger" method="POST">
-        <input type="text" name="burgerName" id="namefield">
-        <input type="submit" value="submit" id="submitBtn">
+        <label for="namefield">What kind of burger do you want!</label><br>
+        <input type="text" name="burgerName" id="namefield" placeholder="Burger Name">
+        <input type="submit" value="Submit" id="submitBtn">
     </form>
     <div class="burgertainer container">
         <div class="fresh container">

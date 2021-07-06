@@ -5,4 +5,52 @@
 
 body {
     background-color: orange;
+    padding: 20px;
 }
+
+.container {
+    padding: 40px;
+}
+
+.title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+#burgerpic {
+    display: block;
+    height: 200px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form {
+    text-align: center;
+    margin-top: 60px;
+}
+
+label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#namefield {
+    margin-top: 30px;
+}
+
+#submitBtn {
+    padding: 3px 5px;
+    border-radius: 5px;
+    border: black solid 1px;
+    transition-duration: .4s;
+    cursor: pointer;
+}
+
+#submitBtn:hover {
+    background-color: rgb(3, 82, 82);
+    color: white;
+    letter-spacing: 3px;
+}
+
+
