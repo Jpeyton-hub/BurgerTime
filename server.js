@@ -1,6 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const exphbs = require("express-handlebars");
+const db = require('./config/orm')
 dotenv.config();
 
 const PORT = process.env.PORT || 8080;
@@ -15,7 +16,12 @@ app.engine(".hbs", exphbs({ defaultLayout: "main", extname: ".hbs" }));
 app.set("view engine", "hbs");
 
 app.get("/", (req, res) => {
-    res.render('index')
+    db.selectAll().then(([rows, fields]) => {
+        console.log(rows);
+        res.render('index', {devouredrows : rows.filter((e) => e.devoured === 1),
+        freshrows : rows.filter((e) => e.devoured === 0)});
+    })
+    
 });
 
 app.listen(PORT, () => {

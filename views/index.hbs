@@ -8,10 +8,18 @@
     </form>
     <div class="burgertainer container">
         <div class="fresh container">
-
+            <ul class="burgerlist">
+                {{#each freshrows}}
+                        <li>{{burger_name}}</li>
+                {{/each}}
+            </ul>
         </div>
         <div class="eaten container">
-
+            <ul class="burgerlist">
+                {{#each devouredrows}}
+                    <li>{{burger_name}}</li>
+                {{/each}}
+            </ul>
         </div>
     </div>
 </div>
