@@ -84,6 +84,8 @@ li {
 .burgerlink {
     transition-duration: .2s;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
 
 .burgerlink:hover {

@@ -20,8 +20,19 @@ app.get("/", (req, res) => {
         console.log(rows);
         res.render('index', {devouredrows : rows.filter((e) => e.devoured === 1),
         freshrows : rows.filter((e) => e.devoured === 0)});
+    }) 
+});
+
+app.get("/eat/:burgerid", (req, res) => {
+    db.updateOne(req.params.burgerid).then(([rows, fields]) => {
+        res.redirect('/');
     })
-    
+});
+
+app.post("/addburger", (req, res) => {
+    db.insertOne(req.body.burgerName).then(([rows, fields]) => {
+        res.redirect('/');
+    })
 });
 
 app.listen(PORT, () => {

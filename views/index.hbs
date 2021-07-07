@@ -11,7 +11,7 @@
             <h2 class="listTitle">Fresh Burgers</h2>
             <ul class="burgerlist">
                 {{#each freshrows}}
-                    <li><a class='burgerlink'>{{burger_name}}</a> <span class='subtext'>&#8592; click to eat!</span></li>
+                    <li><a href="/eat/{{id}}" class='burgerlink'>{{burger_name}}</a> <span class='subtext'>&#8592; click to eat!</span></li>
                 {{/each}}
             </ul>
         </div>
